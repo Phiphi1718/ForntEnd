@@ -1,0 +1,25 @@
+.store-page {
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .store-page h1 {
+    font-size: 2rem;
+    color: #333333;
+  }
+  
+  .store-page address {
+    font-style: normal;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .store-map {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

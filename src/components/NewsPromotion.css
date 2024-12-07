@@ -1,0 +1,208 @@
+/* Căn chỉnh toàn bộ container */
+.container {
+    width: 90vw; /* Chiều rộng container là 90% chiều rộng màn hình */
+    max-width: 900px; /* Đảm bảo chiều rộng không vượt quá 900px */
+    margin: 0 auto;
+
+}
+
+/* Phần tiêu đề */
+.headersale {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.headersale h1 {
+    color: #1a7f24;
+    font-size: 3vw; /* Dùng vw để điều chỉnh kích thước theo màn hình */
+    margin: 0;
+    line-height: 1.2;
+}
+
+.headersale p {
+    color: #666;
+    font-size: 1.5vw; /* Dùng vw để điều chỉnh kích thước theo màn hình */
+    margin: 10px 0 0;
+    line-height: 1.5;
+}
+
+/* Phần grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Luôn giữ 3 khung trên một hàng */
+    gap: 20px; /* Khoảng cách giữa các khung */
+    justify-content: center; /* Căn giữa toàn bộ grid */
+}
+
+/* Phần views */
+.views {
+    display: flex;
+    align-items: center;
+    font-size: 5px; /* Dùng vw để điều chỉnh kích thước chữ */
+    color: #555;
+}
+
+/* Style riêng cho icon con mắt */
+.eye-icon {
+    width: 10px; /* Dùng vw cho kích thước icon */
+    height: 10px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* Phần card */
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%; /* Chiều rộng card thay đổi theo chiều rộng màn hình */
+    max-width: 280px; /* Đảm bảo card không vượt quá 280px */
+    height: auto; /* Chiều cao tự động để thích ứng */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 0; /* Loại bỏ padding */
+    margin: 0; /* Loại bỏ margin */
+    gap: 0; /* Loại bỏ khoảng cách giữa các mục con */
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Cách hiển thị ảnh bên trong card */
+.card img:not(.eye-icon) {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* Hover ảnh */
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* Phần nội dung bên trong card */
+.card-content {
+    flex-grow: 1;
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 60px;
+    
+}
+
+.card-content p {
+    font-size: 15px; 
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Phần footer (chứa views) */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.card-footer .views {
+    font-size: 10px; 
+    color: #999;
+}
+
+/* Khi card được hover */
+.card-footer .views i {
+    margin-right: 5px;
+}
+
+
+/* Responsive adjustments */
+
+/* Màn hình nhỏ hơn 1024px */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* Hiển thị 3 khung trên mỗi hàng */
+        gap: 15px; /* Giảm khoảng cách nếu cần */
+        margin-bottom: 10px;
+    }
+
+    .card {
+        max-width: 260px; /* Giới hạn chiều rộng card nhỏ hơn một chút */
+    }
+
+    .card img:not(.eye-icon) {
+        height: 180px; /* Giảm chiều cao ảnh nếu cần */
+    }
+
+    .card-content p {
+        font-size: 11px; /* Font-size nhỏ hơn để phù hợp */
+    }
+
+    .card-footer .views {
+        font-size: 9px; /* Font-size nhỏ hơn */
+    }
+    .card-content{
+        height: auto;
+    }
+}
+
+/* Màn hình nhỏ hơn 768px */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* Vẫn giữ 3 khung trên mỗi hàng */
+        gap: 10px; /* Giảm thêm khoảng cách */
+    }
+
+    .card {
+        max-width: 240px; /* Điều chỉnh kích thước card nhỏ hơn */
+    }
+
+    .card img:not(.eye-icon) {
+        height: 150px; /* Giảm chiều cao ảnh */
+    }
+
+    .card-content p {
+        font-size: 12px; /* Kích thước chữ nhỏ hơn */
+    }
+
+    .card-footer .views {
+        font-size: 8px;
+    }
+}
+
+/* Màn hình nhỏ hơn 480px */
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* Chuyển thành 2 khung trên mỗi hàng */
+        gap: 10px;
+    }
+
+    .card {
+        max-width: 200px; /* Kích thước nhỏ hơn nữa */
+    }
+
+    .card img:not(.eye-icon) {
+        height: 120px; /* Chiều cao ảnh nhỏ hơn */
+    }
+
+    .card-content p {
+        font-size: 10px;
+    }
+
+    .card-footer .views {
+        font-size: 7px;
+    }
+}

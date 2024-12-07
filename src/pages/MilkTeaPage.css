@@ -1,0 +1,187 @@
+/* Container chính của trang MilkTeaPage */
+.milk-tea-page-container {
+  padding: 30px;
+  background-color: #f7f7f7;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Tiêu đề và phụ đề */
+.milk-tea-section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.milk-tea-section-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Grid chứa các sản phẩm trà */
+.milk-tea-product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Luôn hiển thị 3 khung mỗi hàng */
+  gap: 30px;
+  justify-items: center;
+  align-items: stretch; /* Căn chỉnh tất cả các khung đều chiều cao */
+  max-width: 917px;
+  margin: 0 auto; /* Căn giữa theo chiều ngang */
+}
+
+/* Thẻ sản phẩm trà */
+.milk-tea-product-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: 100%; /* Đảm bảo thẻ chiếm toàn bộ chiều cao grid */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Căn đều nội dung bên trong */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.milk-tea-product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Hình ảnh sản phẩm trà */
+.milk-tea-product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #eee;
+  transition: transform 0.3s ease;
+}
+
+.milk-tea-product-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Nội dung trong sản phẩm trà */
+.milk-tea-product-content {
+  flex-grow: 1; /* Đảm bảo phần nội dung chiếm không gian còn lại */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Căn nội dung giữa và đều */
+  padding: 10px;
+}
+
+/* Tên sản phẩm trà và giá */
+.milk-tea-product-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.milk-tea-product-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #64b3a2;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Nút "Đặt mua" */
+.milk-tea-btn-buy {
+  background-color: #64b3a2;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  padding: 12px 20px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 0 0 12px 12px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.milk-tea-btn-buy:hover {
+  background-color: #529f8b;
+  transform: scale(1.05);
+}
+
+.milk-tea-btn-buy:active {
+  transform: scale(0.98);
+}
+
+/* Thêm hiệu ứng cho nút khi hover */
+.milk-tea-product-card:hover .milk-tea-btn-buy {
+  background-color: #529f8b;
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+
+/* Màn hình nhỏ hơn 768px */
+@media (max-width: 768px) {
+  .milk-tea-product-grid {
+    grid-template-columns: repeat(3, 1fr); /* Vẫn giữ 3 khung mỗi hàng */
+    gap: 7px;
+  }
+
+  .milk-tea-product-card {
+    max-width: 260px; /* Điều chỉnh kích thước thẻ sản phẩm nhỏ hơn */
+  }
+
+  .milk-tea-product-card img {
+    height: 160px; /* Giảm chiều cao ảnh */
+  }
+
+  .milk-tea-product-name {
+    font-size: 1rem; /* Giảm kích thước chữ */
+  }
+
+  .milk-tea-product-price {
+    font-size: 0.9rem;
+  }
+
+  .milk-tea-btn-buy {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Màn hình nhỏ hơn 480px */
+@media (max-width: 480px) {
+  .milk-tea-product-grid {
+    grid-template-columns: repeat(3, 1fr); /* Vẫn giữ 3 khung mỗi hàng */
+    gap: 5px; /* Giảm thêm khoảng cách */
+  }
+
+  .milk-tea-product-card {
+    max-width: 220px; /* Kích thước nhỏ hơn */
+  }
+
+  .milk-tea-product-card img {
+    height: 140px; /* Giảm chiều cao ảnh thêm nữa */
+  }
+
+  .milk-tea-product-name {
+    font-size: 0.9rem;
+  }
+
+  .milk-tea-product-price {
+    font-size: 0.8rem;
+  }
+
+  .milk-tea-btn-buy {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+}

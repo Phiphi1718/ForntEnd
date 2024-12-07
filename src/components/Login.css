@@ -1,0 +1,309 @@
+/* ---------------------------
+   Đặt nền và căn chỉnh trang login/register
+---------------------------- */
+body.login-page {
+  font-family: 'Arial', sans-serif;
+  background: url('https://www.hindustantimes.com/ht-img/img/2024/09/22/1600x900/Garlic_Coffee_1722949921853_1727007650059.jpg') no-repeat center center/cover;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed; /* Thêm để ảnh nền không di chuyển khi cuộn */
+}
+
+@media (max-width: 768px) {
+  body.login-page {
+    background-position: center; /* Điều chỉnh vị trí ảnh nền */
+  }
+}
+
+/* ---------------------------
+   Container của form login/register
+---------------------------- */
+.form-container.login-page {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+@media (max-width: 480px) {
+  .form-container.login-page {
+    width: 90%;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 320px) {
+  .form-container.login-page {
+    width: 85%;
+    padding: 20px;
+  }
+}
+
+/* ---------------------------
+   Tiêu đề form
+---------------------------- */
+h2 {
+  padding-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #fff;
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 320px) {
+  h2 {
+    font-size: 16px;
+  }
+}
+
+/* ---------------------------
+   Input chung cho cả login và register
+---------------------------- */
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  color: #160f0f;
+  font-size: 14px;
+}
+
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="text"]::placeholder,
+input[type="tel"]::placeholder {
+  color: #131212;
+  font-size: 13px;
+}
+
+@media (max-width: 480px) {
+  input[type="email"],
+  input[type="password"],
+  input[type="text"],
+  input[type="tel"] {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+
+/* ---------------------------
+   Nút Gửi
+---------------------------- */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff4081;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #ff3366;
+}
+
+@media (max-width: 480px) {
+  button[type="submit"] {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* ---------------------------
+   Tùy chọn nhớ tài khoản và quên mật khẩu (chỉ dành cho login)
+---------------------------- */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.options input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.options .forgot-password-link {
+  color: #ff4081;
+  text-decoration: none;
+}
+
+.options .forgot-password-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .options {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 12px;
+  }
+
+  .options label {
+    margin-bottom: 10px;
+  }
+}
+
+/* ---------------------------
+   Hiển thị thông báo
+---------------------------- */
+.message {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+@media (max-width: 480px) {
+  .message {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+
+/* ---------------------------
+   Liên kết bổ sung
+---------------------------- */
+.additional-links {
+  margin-top: 20px;
+}
+
+.additional-links p {
+  margin: 8px 0;
+  font-size: 13px;
+  color: #fff;
+}
+
+.additional-links a {
+  color: #ff4081;
+  text-decoration: none;
+}
+
+.additional-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .additional-links p {
+    font-size: 12px;
+  }
+}
+
+/* ---------------------------
+   Nút Quay lại trang chủ
+---------------------------- */
+.back-to-home-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.back-to-home-btn {
+  padding: 8px 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  transition: background-color 0.3s;
+}
+
+.back-to-home-btn:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.back-to-home-btn img {
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+}
+
+.back-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+@media (max-width: 480px) {
+  .back-to-home-btn {
+    font-size: 12px;
+  }
+}
+
+/* ---------------------------
+   Responsive cho màn hình nhỏ
+---------------------------- */
+@media (max-width: 480px) {
+  .form-container.login-page {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .back-to-home-btn {
+    font-size: 12px;
+  }
+
+  button[type="submit"] {
+    font-size: 14px;
+  }
+
+  input[type="email"],
+  input[type="password"],
+  input[type="text"],
+  input[type="tel"] {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .options {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 12px;
+  }
+
+  .options label {
+    margin-bottom: 10px;
+  }
+
+  .message {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .additional-links p {
+    font-size: 12px;
+  }
+}

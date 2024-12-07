@@ -1,0 +1,288 @@
+/* Container chính của trang CakePage */
+.cake-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Tiêu đề và phụ đề */
+.cake-section-title {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #e74c3c;
+}
+
+.cake-section-subtitle {
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #7f8c8d;
+}
+
+/* Product Grid */
+.cake-product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Duy trì 3 khung mỗi hàng */
+  gap: 10px;
+  justify-items: center;
+  align-items: stretch; /* Căn chỉnh chiều cao khung đều nhau */
+}
+
+/* Thẻ sản phẩm bánh */
+.cake-product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 280px;
+  height: 100%; /* Đảm bảo thẻ chiếm toàn bộ chiều cao grid */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Căn đều nội dung bên trong */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cake-product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Hình ảnh sản phẩm bánh */
+.cake-product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Tên sản phẩm bánh */
+.cake-product-name {
+  font-size: 1.2em;
+  margin: 15px;
+  color: #333;
+  text-align: center;
+}
+
+/* Giá sản phẩm bánh */
+.cake-product-price {
+  font-size: 1.1em;
+  margin: 15px;
+  color: #27ae60;
+  text-align: center;
+}
+
+/* Nút "Đặt mua" */
+.cake-btn-buy {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 0 0 10px 10px;
+  padding: 15px;
+  font-size: 1em;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.cake-btn-buy:hover {
+  background-color: #c0392b;
+}
+
+/* Modal Overlay */
+.modal-overlaycake {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalcontentcake {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  max-width: 90%;
+  height: 50%;
+  position: relative;
+}
+
+.close-buttoncake {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #e74c3c;
+}
+
+.product-infocake {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.modal-imagecake img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-detailscake {
+  flex-grow: 1;
+}
+
+.product-detailscake h3 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.product-detailscake p {
+  font-size: 1.2em;
+  color: #27ae60;
+  margin: 10px 0;
+}
+
+/* Quantity Selector */
+.quantity-selectorcake {
+  margin-top: 20px;
+}
+
+.quantity-controlscake {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-buttoncake {
+  background-color: #666666;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.2em;
+}
+
+.quantity-buttoncake:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.quantity-displaycake {
+  font-size: 1.2em;
+}
+
+/* Size Selector */
+.size-selectorcake {
+  margin-top: 20px;
+}
+
+.size-optionscake {
+  display: flex;
+  gap: 15px;
+}
+
+.size-optioncake input {
+  margin-right: 5px;
+}
+
+.size-optioncake label {
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+/* Total Price */
+.total-pricecake {
+  margin-top: 30px;
+  text-align: center;
+  display: flex;
+  margin-left: 50px;
+}
+
+.btn-add-to-cartcake {
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn-add-to-cartcake:hover {
+  background-color: #1e8449;
+}
+
+/* Responsive adjustments */
+
+/* Màn hình nhỏ hơn 768px */
+@media (max-width: 768px) {
+  .cake-product-grid {
+    grid-template-columns: repeat(3, 1fr); /* Vẫn giữ 3 khung mỗi hàng */
+    gap: 7px;
+  }
+
+  .cake-product-card {
+    max-width: 260px; /* Điều chỉnh kích thước thẻ sản phẩm nhỏ hơn */
+  }
+
+  .cake-product-card img {
+    height: 160px; /* Giảm chiều cao ảnh */
+  }
+
+  .cake-product-name {
+    font-size: 1rem; /* Giảm kích thước chữ */
+  }
+
+  .cake-product-price {
+    font-size: 0.9rem;
+  }
+
+  .cake-btn-buy {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Màn hình nhỏ hơn 480px */
+@media (max-width: 480px) {
+  .cake-product-grid {
+    grid-template-columns: repeat(2, 1fr); /* Vẫn giữ 3 khung mỗi hàng */
+    gap: 7px; /* Giảm thêm khoảng cách */
+  }
+
+  .cake-product-card {
+    max-width: 220px; /* Kích thước nhỏ hơn */
+  }
+
+  .cake-product-card img {
+    height: 140px; /* Giảm chiều cao ảnh thêm nữa */
+  }
+
+  .cake-product-name {
+    font-size: 0.9rem;
+  }
+
+  .cake-product-price {
+    font-size: 0.8rem;
+  }
+
+  .cake-btn-buy {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,131 @@
+/* Cấu trúc chính của body hoặc wrapper */
+body, .main-wrapper {
+  min-height: 100vh; /* Đảm bảo chiều cao luôn đủ để footer ở dưới cùng */
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-wrapper {
+  font-family: Arial, sans-serif;
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: auto; /* Đẩy footer xuống dưới cùng */
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cột ngang hàng cố định */
+  gap: 20px; /* Khoảng cách giữa các cột */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  align-items: start; /* Căn tất cả cột lên trên cùng */
+}
+
+.footer-column, 
+.footer-contact-info {
+  display: flex;
+  flex-direction: column; /* Nội dung xếp theo chiều dọc */
+}
+
+/* Phần liên hệ được căn ở giữa và đều với các cột */
+.footer-contact-info {
+  justify-content: center; /* Căn nội dung giữa trong cột */
+}
+
+.footer-heading {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left; /* Căn chữ thẳng hàng trái */
+}
+
+.footer-list li {
+  margin-bottom: 5px;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-contact-info {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.footer-text {
+  margin: 5px 0;
+}
+
+.footer-social-icons {
+  margin-top: 10px;
+}
+
+.footer-social-link {
+  color: #fff;
+  margin: 0 5px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.footer-bottom-text {
+  border-top: 1px solid #444;
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* Responsive adjustments */
+
+/* Responsive: Màn hình nhỏ hơn 768px */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr); /* Vẫn giữ 3 cột ngang hàng */
+    gap: 10px; /* Khoảng cách nhỏ hơn */
+    justify-items: center; /* Căn giữa nội dung trong mỗi cột */
+  }
+
+  .footer-column,
+  .footer-contact-info {
+    text-align: center; /* Căn giữa nội dung văn bản */
+  }
+
+  .footer-contact-info {
+    justify-self: center; /* Căn cột liên hệ ở giữa */
+  }
+}
+
+/* Responsive: Màn hình iPad Pro (1024px x 1366px) */
+@media (max-width: 1366px) and (min-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr); /* Vẫn giữ 3 cột ngang hàng */
+    gap: 15px; /* Khoảng cách nhỏ hơn */
+  }
+.body{
+  height: 1366px;
+}
+  .footer-column,
+  .footer-contact-info {
+    text-align: center; /* Căn giữa nội dung văn bản */
+  }
+
+  .footer-contact-info {
+    justify-self: center; /* Căn cột liên hệ ở giữa */
+  }
+}

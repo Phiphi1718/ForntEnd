@@ -1,0 +1,196 @@
+
+
+/* Container chính */
+.job-application-form-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: linear-gradient(145deg, #ffffff, #d3f9d8); /* Gradient nhẹ giữa trắng và xanh lá cây */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out; /* Thêm hiệu ứng khi hover container */
+  }
+  
+  /* Tiêu đề form */
+  .job-application-form-header h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2d5f2f; /* Màu xanh lá đậm */
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Phần thân form */
+  .job-application-form-body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Trường nhập liệu */
+  .input-field, .input-file, select {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #d1e7d5; /* Viền nhẹ với màu xanh lá cây nhạt */
+    border-radius: 10px;
+    background-color: #f7fff6; /* Màu nền nhạt như sữa */
+    font-size: 16px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hiệu ứng hover và focus cho các trường input */
+  .input-field:hover, .input-file:hover, select:hover {
+    border-color: #7fbd71; /* Viền khi hover sang màu xanh lá đậm */
+    background-color: #e9f9e4; /* Đổi màu nền khi hover */
+  }
+  
+  .input-field:focus, .input-file:focus, select:focus {
+    border-color: #4a9e48; /* Màu viền khi focus */
+    box-shadow: 0 0 5px rgba(74, 158, 72, 0.5); /* Hiệu ứng shadow khi focus */
+    outline: none;
+  }
+  
+  /* Hiệu ứng khi đang chọn file */
+  .input-file {
+    padding: 10px;
+    background-color: #e1f9d2; /* Màu nền sáng cho file input */
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Button Submit */
+  .submit-btn {
+    padding: 15px 20px;
+    background-color: #4a9e48; /* Màu xanh lá cây đậm cho button */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hiệu ứng hover cho button submit */
+  .submit-btn:hover {
+    background-color: #387036; /* Màu xanh lá cây đậm hơn khi hover */
+    transform: scale(1.05); /* Tăng kích thước button khi hover */
+  }
+  
+  /* Thêm hiệu ứng loading cho button khi đang gửi */
+  .submit-btn:disabled {
+    background-color: #b0b0b0;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  /* Đảm bảo rằng tất cả các input có khoảng cách hợp lý */
+  .input-field, select {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+  }
+  
+  .job-application-form-container form {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+    padding-bottom: 30px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Hiệu ứng transition cho các phần tử trong form */
+  .job-application-form-body input,
+  .job-application-form-body select {
+    transition: all 0.3s ease;
+  }
+  
+  /* Hiệu ứng khi hover container */
+  .job-application-form-container:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* Tăng shadow khi hover vào form */
+  }
+  
+  /* Hiệu ứng khi form submit */
+  .job-application-form-container form {
+    transform: scale(1);
+    transition: transform 0.3s ease;
+  }
+  
+  .job-application-form-container form:focus-within {
+    transform: scale(1.05); /* Hiệu ứng khi tập trung vào form */
+  }
+/* Container chính cho ô upload */
+.image-upload-container {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px dashed #a9d18e;
+  padding: 10px;
+  width: fit-content; /* Khung sẽ tự điều chỉnh kích thước theo ảnh */
+  margin: 10px auto; /* Căn giữa khung */
+  }
+  
+  .image-upload-container:hover {
+    border-color: #4a9e48; /* Màu viền khi hover */
+  }
+  
+  /* Label để chứa cả preview và text */
+  .image-upload-label {
+    cursor: pointer;
+  }
+  
+  /* Khung preview */
+  .image-upload-preview {
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa các ảnh */
+    flex-wrap: wrap; /* Các ảnh sẽ xuống hàng nếu vượt quá chiều rộng */
+    justify-content: center;
+    overflow: hidden; /* Ẩn phần thừa nếu ảnh quá to */
+    position: relative;
+  }
+  
+  /* Hình ảnh preview */
+  .image-preview {
+    max-width: 150px; /* Kích thước tối đa mỗi ảnh (tùy chỉnh) */
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  /* Ẩn input file mặc định */
+  .input-file {
+    display: none;
+  }
+  
+  /* Văn bản khi chưa có ảnh */
+  .image-upload-preview span {
+    font-size: 14px;
+    color: #aaa;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  
+  @media screen and (max-width: 600px) {
+    .job-application-form-container {
+      padding: 20px;
+      margin: 20px auto;
+    }
+    .job-application-form-header h2 {
+      font-size: 24px;
+    }
+    .input-field {
+      padding: 12px;
+    }
+    .submit-btn {
+      padding: 12px 18px;
+    }
+  }
+  

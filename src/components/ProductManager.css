@@ -1,0 +1,269 @@
+/* General container styles */
+
+.content{
+  overflow-y: auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  font-family: 'Arial', sans-serif;
+}
+/* Title */
+.pm-title {
+  text-align: center;
+  font-size: 30px;
+  color: #554141;
+  margin-bottom: 20px;
+}
+
+/* Section Titles */
+.pm-section-title {
+  font-size: 27px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+/* Form Styles */
+.pm-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pm-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.pm-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+}
+
+.pm-input, .pm-textarea, .pm-select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  color: black !important;  /* Áp dụng màu chữ đen và ghi đè nếu cần */
+  background-color: white; /* Đảm bảo nền input là màu trắng */
+}
+
+/* Đảm bảo chiều rộng dropdown không vượt quá màn hình */
+.pm-select {
+  width: 100%;
+  max-width: 100%; /* Đảm bảo dropdown không vượt quá 100% chiều rộng của container */
+  box-sizing: border-box; /* Bao gồm padding và border trong chiều rộng */
+}
+
+.pm-input:focus, .pm-textarea:focus, .pm-select:focus {
+  border-color: #007bff;
+}
+
+.pm-textarea {
+  height: 100px;
+}
+
+
+.pm-button {
+  padding: 10px 20px;
+  background-color: #00CC33;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pm-button:hover {
+  background-color: #0056b3;
+}
+
+/* Error Message */
+.pm-error-message {
+  color: #ff4d4d;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Product List Styles */
+.pm-view-all-products {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.pm-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.pm-list-item {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pm-list-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.pm-info-item {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.pm-image-container {
+  margin-top: 15px;
+}
+
+.pm-product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+/* Center title "Danh sách Sản Phẩm" */
+.pm-section-title.center {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Media Queries cho Responsive */
+@media (max-width: 768px) {
+  /* Container chung */
+  .content {
+    padding: 15px;
+  }
+
+  /* Tiêu đề chính */
+  .pm-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  /* Tiêu đề phần */
+  .pm-section-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  /* Form Styles */
+  .pm-form {
+    padding: 15px;
+  }
+
+  .pm-form-group {
+    display: block;
+  }
+  .pm-select{
+    width: 50%;
+  }
+
+  .pm-label {
+    font-size: 12px;
+  }
+
+  .pm-input, .pm-textarea, .pm-select {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .pm-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .pm-button:hover {
+    background-color: #0056b3;
+  }
+
+  /* Sản phẩm danh sách */
+  .pm-view-all-products {
+    margin-top: 20px;
+  }
+
+  .pm-list {
+    flex-direction: column; /* Các sản phẩm sẽ xếp theo cột trên màn hình nhỏ */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .pm-list-item {
+    width: 100%; /* Mỗi item sẽ chiếm toàn bộ chiều rộng */
+    max-width: 350px; /* Đảm bảo chiều rộng tối đa của mỗi item */
+    margin: 0 auto; /* Canh giữa */
+  }
+
+  .pm-info-item {
+    font-size: 12px;
+  }
+
+  .pm-product-image {
+    height: 150px; /* Giảm chiều cao của hình ảnh sản phẩm */
+  }
+
+  /* Trung tâm tiêu đề phần danh sách sản phẩm */
+  .pm-section-title.center {
+    font-size: 22px;
+  }
+}
+
+/* Media Queries cho tablet hoặc màn hình lớn hơn */
+@media (max-width: 992px) {
+  .content {
+    padding: 25px;
+  }
+
+  .pm-title {
+    font-size: 26px;
+    margin-bottom: 18px;
+  }
+
+  .pm-section-title {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  .pm-select{
+    width: 40%;
+  }
+  /* Các phần tử form sẽ hiển thị hợp lý trên tablet */
+  .pm-input, .pm-textarea {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .pm-button {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+
+  .pm-list {
+    flex-direction: row; /* Các sản phẩm sẽ xếp hàng ngang khi có không gian */
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .pm-list-item {
+    width: 48%; /* Mỗi sản phẩm chiếm 48% chiều rộng */
+    max-width: 320px;
+  }
+}
+
+

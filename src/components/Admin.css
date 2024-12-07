@@ -1,0 +1,148 @@
+/* General layout */
+.app {
+  display: flex;
+  flex-direction: column; /* Đổi từ chiều ngang sang chiều dọc */
+  height: 90vh;
+}
+
+/* Sidebar now becomes Header */
+.sidebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #008080;
+  color: white;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+/* Profile Section */
+.sidebar .profile {
+  display: flex;
+  justify-content: flex-end; /* Đưa ảnh sang bên phải */
+  align-items: center; /* Canh giữa theo chiều dọc */
+  width: 10%; /* Đảm bảo profile chiếm hết chiều rộng */
+}
+
+.sidebar .profile img {
+  width: 80px; /* Đặt lại kích thước ảnh nếu cần */
+  height: 80px;
+  border-radius: 50%; /* Làm tròn ảnh */
+  margin-right: 10px;
+  background-color: #9b2323;
+}
+
+/* Dropdown */
+.sidebar .profile .dropdown {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background-color: none;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 150px;
+  padding: 10px;
+  z-index: 2000;
+}
+
+.sidebar .profile .dropdown button {
+  width: 100%;
+  padding: 10px;
+  background-color: #008080;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar .profile .dropdown button:hover {
+  background-color: #006666;
+}
+
+
+/* Menu Buttons */
+.sidebar .menu {
+  display: flex;
+  flex-direction: row; /* Để các button hiển thị theo chiều dọc */
+  justify-content: center; /* Căn giữa các button */
+  align-items: center; /* Căn giữa theo chiều ngang */
+  gap: 10px; /* Khoảng cách giữa các button */
+  flex-grow: 1;
+  display: flex;
+}
+
+.sidebar .menu button {
+  padding: 10px 20px;
+  background-color: #bdbd4e;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  transition: all 0.3s ease;
+  width: 100%; /* Đảm bảo các button chiếm hết chiều rộng */
+}
+
+.sidebar .menu button:hover {
+  background-color: #a6a63a;
+}
+
+/* Content */
+.content {
+  flex-grow: 1;
+  background-color: #e0e0e0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Hamburger icon for small screens */
+.hamburger-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 100;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    flex-direction: row;
+    justify-content: space-between; /* Sắp xếp logo bên trái và menu icon bên phải */
+    align-items: center;
+    top: 0;
+    position: sticky;
+  }
+
+  .sidebar .profile {
+    flex-grow: 0;
+  }
+
+  /* Menu buttons should stack vertically on small screens */
+  .sidebar .menu {
+    flex-direction: column;
+    width: 100%;
+    display: none; /* Hide menu for small screens */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #008080;
+    width: 100%;
+  }
+
+  .sidebar .menu button {
+    font-size: 14px; /* Font size nhỏ hơn cho màn hình nhỏ */
+    width: 100%; /* Menu buttons take full width on mobile */
+  }
+
+  /* Hamburger icon to toggle the menu */
+  .hamburger-icon {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .sidebar.open .menu {
+    display: flex;
+  }
+}

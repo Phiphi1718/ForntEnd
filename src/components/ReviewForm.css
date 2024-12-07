@@ -1,0 +1,123 @@
+/* Overall Form */
+.review-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .review-form h3 {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .review-form p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+  }
+  .DanhGia{
+    margin-left: 55%;
+    margin-top: 20px;
+  }
+  /* Star Rating */
+  .star-rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-left: 150px;
+  }
+  
+  .star-rating .star {
+    font-size: 35px;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin: 0 8px;
+  }
+  
+  .star-rating .star.filled {
+    color: #ffd700; /* Golden color for selected stars */
+  }
+  
+  .star-rating .star:hover {
+    color: #ffcc00; /* Highlight stars on hover */
+  }
+  
+  /* Comment Input */
+  textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: vertical;
+    margin-bottom: 20px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  textarea:focus {
+    border-color: #ffd700;
+  }
+  
+  /* Submit Button */
+  .danhgia {
+    width: 100%;
+    padding: 14px;
+    background-color: #ffd700;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .danhgia:hover {
+    background-color: #e6b800;
+  }
+  
+  /* Product Info */
+  .review-product {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+  .review-product img{
+    margin-left: 100px;
+  }
+  .review-product h4 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    margin-left: 35%;
+  }
+  
+  .review-product p {
+    font-size: 14px;
+    font-weight: bold;
+   
+    color: #777;
+    margin: 5px 90px;
+  }
+  
+  .review-product .price12 {
+    margin-left: 210px;
+    font-weight: 600;
+    color: #777;
+  }
+  

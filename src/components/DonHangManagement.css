@@ -1,0 +1,168 @@
+/* Tổng thể container của Quản lý Đơn hàng */
+.donhang-management-container {
+    padding: 30px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  /* Tiêu đề chính */
+  h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Form tìm kiếm */
+  .search-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-form input {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+  }
+  
+  .search-form input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .search-form button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Thông báo lỗi */
+  .error-message {
+    color: #e74c3c;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  /* Kết quả tìm kiếm */
+  .searched-donhang {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .searched-donhang h2 {
+    color: #007bff;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Tổng thể container của Quản lý Đơn hàng */
+.donhang-list {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Tiêu đề danh sách đơn hàng */
+  .TieuDeList {
+    font-size: 1.6rem;
+    color: #007bff;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Container chứa bảng, có thể cuộn nội dung */
+ /* Container chứa bảng, có thể cuộn nhưng ẩn thanh cuộn */
+.table-container {
+    max-height: 400px;  /* Đảm bảo phần bảng có chiều cao cố định và cuộn được */
+    overflow-y: scroll;  /* Cho phép cuộn dọc */
+    scrollbar-width: none;  /* Ẩn thanh cuộn trên Firefox */
+    -ms-overflow-style: none;  /* Ẩn thanh cuộn trên Internet Explorer */
+  }
+  
+  .table-container::-webkit-scrollbar {
+    display: none;  /* Ẩn thanh cuộn trên Chrome, Safari và các trình duyệt dựa trên Webkit */
+  }
+  
+  
+  /* Tiêu đề bảng luôn cố định */
+  .TieuDeDonHang {
+    position: sticky;
+    top: 0;
+    background-color: #f4f4f4;
+    color: #007bff;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px 10px;
+    z-index: 1;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Bảng đơn hàng */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  td {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Cột đồng nhất với tiêu đề bảng */
+  td:nth-child(1), td:nth-child(2), td:nth-child(3), td:nth-child(4),
+  td:nth-child(5), td:nth-child(6), td:nth-child(7), td:nth-child(8) {
+    width: 12%; /* Điều chỉnh độ rộng cột để tránh bị co kéo */
+  }
+  
+  /* Cải thiện các hiệu ứng hover */
+  .NoiDungList tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  /* Cột Tổng Tiền nổi bật */
+  td:last-child {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  td:nth-child(3), td:nth-child(4), td:nth-child(8) {
+    color: #2c3e50;
+  }
+  
+  

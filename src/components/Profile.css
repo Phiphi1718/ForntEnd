@@ -1,0 +1,110 @@
+/* Tạo một container gọn gàng cho phần profile */
+.profile-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .back-to-home-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .back-to-home-btn {
+    padding: 8px 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #0e0c0c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    transition: background-color 0.3s;
+  }
+  
+  .back-to-home-btn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  
+  .back-to-home-btn img {
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+  }
+ 
+  
+  /* Tiêu đề thông tin cá nhân */
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Các trường nhập liệu */
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  .input-group input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Nút Save */
+  .save-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .save-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Style cho các thông tin hiển thị */
+  .profile-info {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .profile-info p {
+    margin: 8px 0;
+  }
+  
+  .profile-info .info-label {
+    font-weight: bold;
+  }
+  
+ 

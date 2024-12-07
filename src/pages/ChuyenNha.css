@@ -1,0 +1,325 @@
+/* Container tổng */
+.news-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    gap: 20px; /* Khoảng cách giữa các phần tử */
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  .chuyen-nha-container {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .chuyen-nha-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .chuyen-nha-underline {
+    width: 50px;
+    height: 3px;
+    background-color: orange;
+    margin: 0 auto 15px auto;
+  }
+  
+  .chuyen-nha-text {
+    font-size: 13px;   /* Kích thước chữ mặc định */
+    line-height: 1.6;
+    color: #333;
+    max-width: 600px;  /* Giới hạn chiều rộng */
+    margin: 0 auto;    /* Căn giữa */
+  }
+  
+  /* Khi màn hình nhỏ hơn hoặc bằng 768px (ví dụ: điện thoại hoặc tablet nhỏ) */
+  @media (max-width: 768px) {
+    .chuyen-nha-title {
+      font-size: 20px;  /* Giảm kích thước chữ tiêu đề cho màn hình nhỏ */
+    }
+  
+    .chuyen-nha-underline {
+      width: 40px;  /* Thu nhỏ đường kẻ dưới cho màn hình nhỏ */
+    }
+  
+    .chuyen-nha-text {
+      font-size: 12px;   /* Giảm kích thước chữ cho màn hình nhỏ */
+      max-width: 90%;    /* Giảm chiều rộng tối đa để phù hợp với màn hình nhỏ */
+      padding: 10px;     /* Giảm khoảng cách bên trong */
+    }
+  }
+  
+  /* Khi màn hình nhỏ hơn hoặc bằng 480px (ví dụ: điện thoại rất nhỏ) */
+  @media (max-width: 480px) {
+    .chuyen-nha-title {
+      font-size: 18px;  /* Giảm kích thước chữ tiêu đề cho màn hình rất nhỏ */
+    }
+  
+    .chuyen-nha-underline {
+      width: 30px;  /* Thu nhỏ đường kẻ dưới cho màn hình rất nhỏ */
+    }
+  
+    .chuyen-nha-text {
+      font-size: 11px;   /* Giảm kích thước chữ cho màn hình rất nhỏ */
+      max-width: 100%;   /* Chiều rộng tối đa chiếm toàn bộ màn hình */
+      padding: 8px;      /* Giảm khoảng cách bên trong */
+    }
+  }
+  
+  
+  
+  /* Card */
+  .news-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  /* Hình ảnh */
+  .news-card img {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+  @media (max-width: 768px) {
+    .news-container {
+      grid-template-columns: 1fr;  /* Chuyển sang một cột */
+      padding: 10px;              /* Giảm padding cho phù hợp với màn hình nhỏ */
+    }
+  
+    .news-card {
+      margin-bottom: 20px; /* Thêm khoảng cách dưới mỗi card */
+    }
+  }
+  
+  /* Khi màn hình nhỏ hơn hoặc bằng 480px (ví dụ: điện thoại rất nhỏ) */
+  @media (max-width: 480px) {
+    .news-container {
+      grid-template-columns: 1fr;  /* Chuyển sang một cột */
+      padding: 5px;               /* Giảm padding cho phù hợp với màn hình rất nhỏ */
+    }
+  
+    .news-card {
+      margin-bottom: 15px; /* Giảm khoảng cách dưới mỗi card */
+    }
+  
+    /* Thêm chỉnh sửa kích thước ảnh nếu cần */
+    .news-card img {
+      width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng */
+      height: auto; /* Duy trì tỷ lệ ảnh */
+    }
+  }
+  
+  /* Nội dung */
+  .news-content {
+    padding: 15px;
+  }
+  
+  .news-content h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .news-content p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .news-content p:first-of-type {
+    font-weight: bold;
+    color: #999;
+  }
+  @media (max-width: 768px) {
+    .news-content {
+      padding: 10px;  /* Giảm padding cho phù hợp với màn hình nhỏ */
+    }
+  
+    .news-content h1 {
+      font-size: 16px;  /* Giảm kích thước tiêu đề */
+    }
+  
+    .news-content p {
+      font-size: 12px;  /* Giảm kích thước chữ của đoạn văn */
+    }
+  }
+  
+  /* Khi màn hình nhỏ hơn hoặc bằng 480px (ví dụ: điện thoại rất nhỏ) */
+  @media (max-width: 480px) {
+    .news-content {
+      padding: 5px;   /* Giảm padding thêm cho màn hình rất nhỏ */
+    }
+  
+    .news-content h1 {
+      font-size: 14px;  /* Giảm kích thước tiêu đề cho màn hình rất nhỏ */
+    }
+  
+    .news-content p {
+      font-size: 11px;  /* Giảm kích thước chữ của đoạn văn cho màn hình rất nhỏ */
+    }
+  }
+  .coffeeholic-container{
+    display: flex;
+    gap: 10px;
+  }
+  .coffeeholic-line{
+    width: 3px;
+    height: 50px;
+    background-color: orange;
+   
+  }
+  .coffeeholic-image{
+  
+    width: 33.33%;
+  border-radius: 20px;
+  overflow: hidden;
+    
+  
+  }
+  .coffeeholic-image img{
+   width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .coffeeholic-card{
+   display: flex;
+   gap: 20px;
+   background-color: #FFF7E6;
+   padding: 10px 10px;
+  }
+  @media (max-width: 768px) {
+    .coffeeholic-container {
+      flex-direction: column;  /* Xếp các phần tử theo chiều dọc */
+      gap: 20px;  /* Tăng khoảng cách giữa các phần tử */
+    }
+  
+    .coffeeholic-image {
+      width: 100%;  /* Ảnh chiếm toàn bộ chiều rộng của phần tử */
+      margin-bottom: 10px;  /* Thêm khoảng cách dưới mỗi ảnh */
+    }
+  
+    .coffeeholic-card {
+      flex-direction: column;  /* Thay đổi chiều của các phần tử trong thẻ card */
+      gap: 10px;  /* Giảm khoảng cách giữa các phần tử trong card */
+    }
+  }
+  
+  /* Khi màn hình nhỏ hơn hoặc bằng 480px (ví dụ: điện thoại rất nhỏ) */
+  @media (max-width: 480px) {
+    .coffeeholic-container {
+      flex-direction: column;  /* Xếp các phần tử theo chiều dọc */
+      gap: 15px;  /* Thêm khoảng cách giữa các phần tử */
+    }
+  
+    .coffeeholic-image {
+      width: 100%;  /* Ảnh chiếm toàn bộ chiều rộng của phần tử */
+      margin-bottom: 10px;  /* Thêm khoảng cách dưới mỗi ảnh */
+    }
+  
+    .coffeeholic-card {
+      flex-direction: column;  /* Thay đổi chiều của các phần tử trong thẻ card */
+      gap: 8px;  /* Giảm khoảng cách giữa các phần tử trong card */
+    }
+  }
+  .teaholic-all{
+    display: flex;
+  }
+  
+  .teaholic-container{
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+  }
+  .teaholic-line{
+    width: 3px;
+    height: 50px;
+    background-color: orange;
+  }
+  .teaholic-cards{
+    
+    display: flex;
+    gap: 10px;
+   padding: 10px;
+    
+  }
+  .teaholic-card h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .teaholic-card p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+  }
+  .teaholic-card p:first-of-type {
+    font-weight: bold;
+    color: #999;
+  }
+  .teaholic-image{
+    width: 100%;
+  }
+  .teaholic-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  /* Khi màn hình nhỏ hơn hoặc bằng 768px (ví dụ: điện thoại hoặc tablet nhỏ) */
+  @media (max-width: 768px) {
+    .teaholic-all {
+      flex-direction: column;  /* Xếp các phần tử theo chiều dọc */
+    }
+  
+    .teaholic-container {
+      flex-direction: column;  /* Xếp các phần tử theo chiều dọc */
+      gap: 20px;  /* Tăng khoảng cách giữa các phần tử */
+    }
+  
+    .teaholic-cards {
+      flex-direction: column;  /* Thay đổi chiều của các phần tử trong thẻ cards */
+      gap: 15px;  /* Tăng khoảng cách giữa các phần tử trong card */
+    }
+  
+    .teaholic-card h1 {
+      font-size: 16px;  /* Giảm kích thước tiêu đề cho màn hình nhỏ */
+    }
+  
+    .teaholic-card p {
+      font-size: 12px;  /* Giảm kích thước chữ của đoạn văn cho màn hình nhỏ */
+    }
+  }
+  
+  /* Khi màn hình nhỏ hơn hoặc bằng 480px (ví dụ: điện thoại rất nhỏ) */
+  @media (max-width: 480px) {
+    .teaholic-all {
+      flex-direction: column;  /* Xếp các phần tử theo chiều dọc */
+    }
+  
+    .teaholic-container {
+      flex-direction: column;  /* Xếp các phần tử theo chiều dọc */
+      gap: 25px;  /* Tăng khoảng cách giữa các phần tử */
+    }
+  
+    .teaholic-cards {
+      flex-direction: column;  /* Thay đổi chiều của các phần tử trong thẻ cards */
+      gap: 20px;  /* Tăng khoảng cách giữa các phần tử trong card */
+    }
+  
+    .teaholic-card h1 {
+      font-size: 14px;  /* Giảm kích thước tiêu đề cho màn hình rất nhỏ */
+    }
+  
+    .teaholic-card p {
+      font-size: 11px;  /* Giảm kích thước chữ của đoạn văn cho màn hình rất nhỏ */
+    }
+  }
+  

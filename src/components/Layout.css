@@ -1,0 +1,23 @@
+/* Đảm bảo layout chiếm toàn bộ chiều cao */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Chiều cao tối thiểu bằng chiều cao viewport */
+  }
+  
+  .main-content {
+    flex: 1; /* Đẩy footer xuống cuối */
+    padding: 20px; /* Thêm khoảng cách nếu cần */
+  }
+  
+  footer {
+    background-color: #f4f4f4; /* Màu nền footer */
+    text-align: center;
+    padding: 10px 0;
+  }
+  

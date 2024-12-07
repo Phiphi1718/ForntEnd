@@ -1,0 +1,201 @@
+/* Container chính của trang CoffeePage */
+.coffee-page-container {
+  padding: 30px;
+  background-color: #f4f4f9;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Tiêu đề và phụ đề */
+.coffee-section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.coffee-section-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.coffee-product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Luôn hiển thị 3 khung mỗi hàng */
+  gap: 30px;
+  justify-items: center;
+  align-items: stretch; /* Căn chỉnh tất cả các khung đều chiều cao */
+  max-width: 917px;
+  margin: 0 auto; /* Căn giữa theo chiều ngang */
+}
+
+
+/* Thẻ sản phẩm */
+.coffee-product-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: 100%; /* Đảm bảo thẻ chiếm toàn bộ chiều cao grid */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Căn đều nội dung bên trong */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.coffee-product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Hiển thị nhãn "Best Seller" */
+.coffee-product-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ff6f61;
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Hình ảnh sản phẩm */
+.coffee-product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #eee;
+  transition: transform 0.3s ease;
+}
+
+.coffee-product-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Nội dung trong sản phẩm */
+.coffee-product-content {
+  flex-grow: 1; /* Đảm bảo phần nội dung chiếm không gian còn lại */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Căn nội dung giữa và đều */
+  padding: 10px;
+}
+
+/* Tên sản phẩm và giá */
+.coffee-product-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.coffee-product-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ff6f61;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Nút "Đặt mua" */
+.coffee-btn-buy {
+  background-color: #ff6f61;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  padding: 12px 20px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 0 0 12px 12px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.coffee-btn-buy:hover {
+  background-color: #ff523f;
+  transform: scale(1.05);
+}
+
+.coffee-btn-buy:active {
+  transform: scale(0.98);
+}
+
+/* Thêm hiệu ứng cho nút khi hover */
+.coffee-product-card:hover .coffee-btn-buy {
+  background-color: #ff523f;
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+
+/* Màn hình nhỏ hơn 768px */
+@media (max-width: 768px) {
+  .coffee-product-grid {
+    grid-template-columns: repeat(3, 1fr); /* Vẫn giữ 3 khung mỗi hàng */
+    gap: 15px;
+  }
+
+  .coffee-product-card {
+    max-width: 260px; /* Điều chỉnh kích thước thẻ sản phẩm nhỏ hơn */
+  }
+
+  .coffee-product-card img {
+    height: 160px; /* Giảm chiều cao ảnh */
+  }
+
+  .coffee-product-name {
+    font-size: 1rem; /* Giảm kích thước chữ */
+  }
+
+  .coffee-product-price {
+    font-size: 0.9rem;
+  }
+
+  .coffee-btn-buy {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Màn hình nhỏ hơn 480px */
+@media (max-width: 480px) {
+  .coffee-product-grid {
+    grid-template-columns: repeat(2, 1fr); /* Vẫn giữ 3 khung mỗi hàng */
+    gap: 10px; /* Giảm thêm khoảng cách */
+  }
+
+  .coffee-product-card {
+    max-width: 220px; /* Kích thước nhỏ hơn */
+  }
+
+  .coffee-product-card img {
+    height: 140px; /* Giảm chiều cao ảnh thêm nữa */
+  }
+
+  .coffee-product-name {
+    font-size: 0.9rem;
+  }
+
+  .coffee-product-price {
+    font-size: 0.8rem;
+  }
+
+  .coffee-btn-buy {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+}
