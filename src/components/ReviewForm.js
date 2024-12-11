@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './ReviewForm.css';
+import { useNavigate } from 'react-router-dom';
 
 const ReviewForm = () => {
+  const navigate = useNavigate();
   const [order, setOrder] = useState([]);
   const [ratings, setRatings] = useState([]);
   const [comments, setComments] = useState([]);
@@ -77,7 +79,18 @@ const ReviewForm = () => {
         <div className="overlay">
           <div className="overlay-content">
             <h4>{overlayMessage}</h4>
-            <button onClick={() => setShowOverlay(false)}>Đóng</button>
+            <button 
+              className="Dong" 
+              onClick={() => {
+                setShowOverlay(false);
+                // Nếu không còn sản phẩm nào để đánh giá, chuyển về trang chủ
+                if (order.length === 0) {
+                  navigate('/');
+                }
+              }}
+            >
+              Đóng
+            </button>
           </div>
         </div>
       )}
@@ -85,42 +98,44 @@ const ReviewForm = () => {
       {order.length === 0 ? (
         <p>Không có sản phẩm để đánh giá.</p>
       ) : (
-        order.map((product, index) => (
-          <div key={product.id} className="review-product">
-           <img
-              src={`https://localhost:7095/${product.imageUrl}`}
-              alt={product.name}
-            />
-            <h4>{product.name}</h4>
-            <p className="price12">{product.price} VND</p>
-            <p>{product.description}</p>
-
-            <div>
-              <label>
-               <div className="DanhGia" >Đánh giá</div>
-                <div className="star-rating">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <span
-                      key={star}
-                      className={`star ${ratings[index] >= star ? 'filled' : ''}`}
-                      onClick={() => handleRatingChange(index, star)}
-                    >
-                      ★
-                    </span>
-                  ))}
-                </div>
-              </label>
-            </div>
-            <div>
-              <textarea
-                value={comments[index]}
-                onChange={(e) => handleCommentChange(index, e.target.value)}
-                placeholder="Nhập đánh giá của bạn..."
+        <div className="products-grid">
+          {order.map((product, index) => (
+            <div key={product.id} className="review-product">
+              <img
+                src={`https://localhost:7095/${product.imageUrl}`}
+                alt={product.name}
               />
+              <h4>{product.name}</h4>
+              <p className="price12">{product.price} VND</p>
+              <p>{product.description}</p>
+
+              <div>
+                <label>
+                  <div className="DanhGia">Đánh giá</div>
+                  <div className="star-rating">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <span
+                        key={star}
+                        className={`star ${ratings[index] >= star ? 'filled' : ''}`}
+                        onClick={() => handleRatingChange(index, star)}
+                      >
+                        ★
+                      </span>
+                    ))}
+                  </div>
+                </label>
+              </div>
+              <div>
+                <textarea
+                  value={comments[index]}
+                  onChange={(e) => handleCommentChange(index, e.target.value)}
+                  placeholder="Nhập đánh giá của bạn..."
+                />
+              </div>
+              <button className="danhgia" onClick={() => handleReviewSubmit(index)}>Gửi đánh giá</button>
             </div>
-            <button className="danhgia" onClick={() => handleReviewSubmit(index)}>Gửi đánh giá</button>
-          </div>
-        ))
+          ))}
+        </div>
       )}
     </div>
   );

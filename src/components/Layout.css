@@ -12,7 +12,7 @@ html, body {
   
   .main-content {
     flex: 1; /* Đẩy footer xuống cuối */
-    padding: 20px; /* Thêm khoảng cách nếu cần */
+    padding: 4px; /* Thêm khoảng cách nếu cần */
   }
   
   footer {

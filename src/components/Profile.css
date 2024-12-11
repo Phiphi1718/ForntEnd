@@ -1,13 +1,14 @@
-/* Tạo một container gọn gàng cho phần profile */
+/* Mobile first approach */
 .profile-container {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
+    width: 95%;
+    max-width: 800px;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    background: linear-gradient(to bottom right, #ffffff, #f8f9fa);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
   
   .back-to-home-button {
     position: absolute;
@@ -17,19 +18,7 @@
   
   .back-to-home-btn {
     padding: 8px 12px;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #0e0c0c;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    font-size: 13px;
-    transition: background-color 0.3s;
-  }
-  
-  .back-to-home-btn:hover {
-    background-color: rgba(255, 255, 255, 0.4);
+    font-size: 0.9rem;
   }
   
   .back-to-home-btn img {
@@ -42,61 +31,67 @@
   /* Tiêu đề thông tin cá nhân */
   h2 {
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     color: #333;
-    margin-bottom: 20px;
+    margin: 30px 0 15px;
   }
   
   /* Các trường nhập liệu */
   .input-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    position: relative;
   }
   
   .input-group label {
-    font-weight: bold;
-    font-size: 16px;
-    color: #333;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #495057;
+    margin-bottom: 5px;
     display: block;
-    margin-bottom: 8px;
+    transition: all 0.3s ease;
   }
   
   .input-group input {
     width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 6px;
-    border: 1px solid #ddd;
-    background-color: #f9f9f9;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+    background-color: #fff;
+    transition: all 0.3s ease;
   }
   
   .input-group input:focus {
-    border-color: #007bff;
-    outline: none;
+    border-color: #4dabf7;
+    box-shadow: 0 0 0 4px rgba(77, 171, 247, 0.1);
   }
   
   /* Nút Save */
   .save-button {
     width: 100%;
     padding: 12px;
-    font-size: 18px;
-    background-color: #007bff;
-    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #228be6, #15aabf);
+    color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    margin-top: 20px;
   }
   
   .save-button:hover {
-    background-color: #0056b3;
+    background: linear-gradient(135deg, #1c7ed6, #1098ad);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   }
   
   /* Style cho các thông tin hiển thị */
   .profile-info {
-    font-size: 18px;
-    color: #555;
+    font-size: 0.9rem;
+    color: #495057;
+    line-height: 1.6;
   }
   
   .profile-info p {
@@ -104,7 +99,160 @@
   }
   
   .profile-info .info-label {
-    font-weight: bold;
+    font-weight: 600;
+    color: #228be6;
+    margin-right: 8px;
   }
   
+  /* Tablet (768px and up) */
+  @media screen and (min-width: 768px) {
+    .profile-container {
+        width: 90%;
+        margin: 2rem auto;
+        padding: 2rem;
+        border-radius: 15px;
+    }
+
+    .back-to-home-button {
+        top: 20px;
+        left: 20px;
+    }
+
+    .back-to-home-btn {
+        padding: 10px 16px;
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin: 35px 0 20px;
+    }
+
+    .input-group {
+        margin-bottom: 20px;
+    }
+
+    .input-group label {
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+    }
+
+    .input-group input {
+        padding: 12px 14px;
+        font-size: 1rem;
+    }
+
+    .save-button {
+        padding: 13px;
+        font-size: 1.05rem;
+    }
+
+    .profile-info {
+        font-size: 1rem;
+    }
+  }
+  
+  /* Desktop (1024px and up) */
+  @media screen and (min-width: 1024px) {
+    .profile-container {
+        width: 100%;
+        max-width: 800px;
+        margin: 2.5rem auto;
+        padding: 2.5rem;
+    }
+
+    .back-to-home-btn {
+        padding: 10px 16px;
+        font-size: 1.1rem;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin: 40px 0 25px;
+    }
+
+    .input-group {
+        margin-bottom: 25px;
+    }
+
+    .input-group label {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .input-group input {
+        padding: 14px 16px;
+        font-size: 1.1rem;
+    }
+
+    .save-button {
+        padding: 14px;
+        font-size: 1.1rem;
+    }
+
+    .profile-info {
+        font-size: 1.1rem;
+    }
+  }
+  
+  /* Large Desktop (1440px and up) */
+  @media screen and (min-width: 1440px) {
+    .profile-container {
+        max-width: 900px;
+        padding: 3rem;
+    }
+
+    .input-group input {
+        padding: 16px 18px;
+    }
+
+    .save-button {
+        padding: 16px;
+        font-size: 1.2rem;
+    }
+  }
+  
+  /* Landscape orientation for mobile */
+  @media screen and (max-height: 500px) and (orientation: landscape) {
+    .profile-container {
+        margin: 0.5rem auto;
+        padding: 1rem;
+    }
+
+    .input-group {
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        margin: 20px 0 10px;
+    }
+  }
+  
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .profile-container {
+        background: linear-gradient(to bottom right, #2d3436, #2c3e50);
+        color: #f8f9fa;
+    }
+
+    .input-group label {
+        color: #e9ecef;
+    }
+
+    .input-group input {
+        background-color: #343a40;
+        border-color: #495057;
+        color: #f8f9fa;
+    }
+
+    .back-to-home-btn {
+        background: linear-gradient(135deg, #343a40, #495057);
+        color: #f8f9fa;
+    }
+
+    .profile-info {
+        color: #e9ecef;
+    }
+  }
  
+  

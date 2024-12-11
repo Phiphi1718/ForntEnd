@@ -18,8 +18,8 @@ body, .main-wrapper {
 
 .footer-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cột ngang hàng cố định */
-  gap: 20px; /* Khoảng cách giữa các cột */
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 20px; /* Gap between columns */
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;

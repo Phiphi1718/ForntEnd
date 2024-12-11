@@ -75,8 +75,7 @@ function Profile() {
     <div className="profile-container">
       <div className="back-to-home-button">
         <button className="back-to-home-btn" onClick={() => navigate('/')}>
-          <img src="/back.png" alt="Quay lại" style={{ width: '10px', height: '10px', marginRight: '5px' }} /> Quay lại trang chủ
-        </button>
+          <img src="/back.png" alt="Quay lại" style={{ width: '10px', height: '10px', marginRight: '5px' }} /> </button>
       </div>
 
       <div>
