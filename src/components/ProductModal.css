@@ -17,7 +17,7 @@
   background: white;
   border-radius: 10px;
   padding: 20px;
-  width: 40%;
+  width: 25%;
   height: auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   position: relative;
@@ -31,7 +31,7 @@
 .close-button1 {
   position: absolute;
   top: 0;
-  left: 560px;
+  left: 477px;
   background: none;
   border: none;
   font-size: 1.5rem;
@@ -271,9 +271,47 @@ margin-bottom: 5px;
 }
 
 /* Responsive CSS */
-@media (max-width: 1024px) {
+
+
+@media (max-width: 768px) {
   .modalcontent2 {
-    width: 60%; /* Giảm bớt kích thước modal trên màn hình nhỏ */
+    width: 80%; /* Giảm modal xuống 80% cho màn hình nhỏ hơn */
+  }
+
+  .size-selector h4 {
+    font-size: 14px;
+  }
+
+  .modal-image img {
+    max-width: 100px; /* Giảm kích thước ảnh cho màn hình nhỏ */
+  }
+
+  .quantity-display {
+    font-size: 12px;
+  }
+
+  .size-options {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .close-button1{
+    position: absolute;
+    top: 0;
+    left: 350px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+    width: 20px;
+  }
+}
+
+
+@media (max-width: 1724px) {
+  .modalcontent2 {
+    width: 30%; /* Giảm bớt kích thước modal trên màn hình nhỏ */
   }
 
   .product-info {
@@ -307,7 +345,7 @@ margin-bottom: 5px;
   .close-button1{
     position: absolute;
     top: 0;
-    left: 350px;
+    left: 450px;
     background: none;
     border: none;
     font-size: 1.5rem;
@@ -339,6 +377,7 @@ margin-bottom: 5px;
     gap: 10px;
     flex-wrap: wrap;
   }
+  
 }
 
 @media (max-width: 480px) {
