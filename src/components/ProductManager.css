@@ -1,11 +1,10 @@
 /* Container chính */
 .pm-container {
-  max-width: 1200px;
+  max-width: 1700px;
   margin: 0 auto;
   padding: 20px;
   background: linear-gradient(to bottom, #f8f9fa, #ffffff);
 }
-
 
 /* Tiêu đề chính */
 .pm-title {
@@ -125,6 +124,7 @@
   align-items: center;
   padding: 12px;
   background: #f8f9fa;
+  height: 90px;
   border-radius: 8px;
   margin-bottom: 10px;
   transition: all 0.3s ease;
@@ -161,15 +161,22 @@
 /* Product list */
 .pm-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   padding: 20px 0;
 }
 
 .pm-list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  min-height: 200px;
+  flex-grow: 1;
   background: white;
   border-radius: 12px;
-  padding: 20px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
 }
@@ -364,6 +371,33 @@
   width: 100px;
   height: 3px;
   background: linear-gradient(to right, #3498db, #2980b9);
+}
+
+.pm-success-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #d4edda;
+  color: #155724;
+  padding: 15px;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  z-index: 1000; /* Đảm bảo thông báo hiển thị trên các thành phần khác */
+}
+
+.pm-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 150px;
+}
+
+.pm-product-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
 
 
