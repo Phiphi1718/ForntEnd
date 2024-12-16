@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import './ProductManager.css';
 
-
 const ProductManager  = () => {
   const [error, setError] = useState("");
   const [editProduct, setEditProduct] = useState(null);
@@ -24,6 +23,8 @@ const ProductManager  = () => {
   const [searchProductName, setSearchProductName] = useState("");
   const [products, setProducts] = useState([]);
   const [isProductsVisible, setIsProductsVisible] = useState(false);
+
+  const [successMessage, setSuccessMessage] = useState(""); // Thêm state cho thông báo thành công
 
   const categories = [
     { id: 1, name: "Trà" },
@@ -47,7 +48,9 @@ const ProductManager  = () => {
       await axios.post("https://localhost:7095/api/Product/addProduct", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
-      setError("Sản phẩm đã được thêm thành công");
+      setSuccessMessage("Sản phẩm đã được thêm thành công");
+      setError("");
+      setTimeout(() => setSuccessMessage(""), 5000);
     } catch {
       setError("Có lỗi xảy ra khi thêm sản phẩm");
     }
@@ -89,7 +92,9 @@ const ProductManager  = () => {
       await axios.put(`https://localhost:7095/api/Product/edit products/${oldProductName}`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
-      setError("Sản phẩm đã được chỉnh sửa thành công");
+      setSuccessMessage("Sản phẩm đã được chỉnh sửa thành công");
+      setError("");
+      setTimeout(() => setSuccessMessage(""), 5000);
     } catch {
       setError("Có lỗi xảy ra khi chỉnh sửa sản phẩm");
     }
@@ -105,8 +110,10 @@ const ProductManager  = () => {
 
     try {
       await axios.delete(`https://localhost:7095/api/Product/delete/${deleteProductName}`);
-      setError("Sản phẩm đã được xóa thành công");
+      setSuccessMessage("Sản phẩm đã được xóa thành công");
       setDeleteProductName("");
+      setError("");
+      setTimeout(() => setSuccessMessage(""), 5000);
     } catch {
       setError("Có lỗi xảy ra khi xóa sản phẩm");
     }
@@ -353,6 +360,11 @@ const ProductManager  = () => {
   )}
 </div>
 
+{successMessage && (
+  <div className="pm-success-message">
+    {successMessage}
+  </div>
+)}
 
 {error && <p className="pm-error-message">{error}</p>}
     </div>
