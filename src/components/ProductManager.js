@@ -211,17 +211,20 @@ const ProductManager  = () => {
 
         {editProduct && (
           <div className="pm-product-info">
-             <h5 className="pm-info-title">Sản phẩm tìm thấy</h5>
-            <p className="pm-info-item"><strong>Tên sản phẩm:</strong> {editProduct.name}</p>
-            <p className="pm-info-item"><strong>Giá:</strong> {editProduct.price} VND</p>
-            <p className="pm-info-item"><strong>Mô tả:</strong> {editProduct.description}</p>
-            <p className="pm-info-item"><strong>Danh mục:</strong> {editProduct.categoryName}</p>
-            <div className="pm-image-container">
+            <div className="pm-product-details">
+              <h5 className="pm-info-title">Thông tin sản phẩm</h5>
+              <p className="pm-info-item"><strong>Tên sản phẩm:</strong> {editProduct.name}</p>
+              <p className="pm-info-item"><strong>Giá:</strong> {editProduct.price} VND</p>
+              <p className="pm-info-item"><strong>Mô tả:</strong> {editProduct.description}</p>
+              <p className="pm-info-item"><strong>Danh mục:</strong> {editProduct.categoryName}</p>
+            </div>
+            
+            <div className="pm-img-container">
               {editProduct.imageUrls?.$values && editProduct.imageUrls.$values.length > 0 ? (
                 <img
                   src={`https://localhost:7095/${editProduct.imageUrls.$values[0]}`}
                   alt={editProduct.name}
-                  className="pm-product-image"
+                  className="pm-product-img"
                 />
               ) : (
                 <p>Không có hình ảnh</p>
