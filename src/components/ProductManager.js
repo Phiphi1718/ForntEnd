@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import './ProductManager.css';
 
+
 const ProductManager  = () => {
   const [error, setError] = useState("");
   const [editProduct, setEditProduct] = useState(null);
