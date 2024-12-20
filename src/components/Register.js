@@ -38,12 +38,9 @@ function Register() {
   return (
     <div className="form-container login-page">
       <div className="back-to-home-button">
-        <Link to="/">
-          <button className="back-to-home-btn">
-            <img src="/back.png" alt="Quay lại" className="back-icon" />
-            Quay lại trang chủ
-          </button>
-        </Link>
+        <button className="back-to-home-btn" onClick={() => navigate('/')}>
+          <img src="/back.png" alt="Quay lại" style={{ width: '10px', height: '10px', marginRight: '5px' }} /> Quay lại trang chủ
+        </button>
       </div>
       <h2 className="form-title">Đăng Ký</h2>
       <form onSubmit={handleRegister}>

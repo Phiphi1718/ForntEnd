@@ -72,7 +72,7 @@ const Admin = () => {
 
         {/* Profile Section */}
         <div className="profile" onClick={toggleDropdown}>
-          <img alt="Profile picture" height="100" src="nhomTPQ.jpg" width="100" />
+          <img alt="Profile picture" height="100" src="admin.png" width="100" />
           {isDropdownOpen && (
             <div className="dropdown">
               <button onClick={handleLogout}>Logout</button>

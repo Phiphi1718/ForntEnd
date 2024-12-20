@@ -231,7 +231,7 @@ button[type="submit"]:hover {
 .back-to-home-btn {
   padding: 8px 12px;
   background-color: rgba(255, 255, 255, 0.2);
-  color: #fff;
+  color: #2f2f2f;
   border: none;
   border-radius: 5px;
   cursor: pointer;

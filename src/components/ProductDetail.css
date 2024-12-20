@@ -12,14 +12,16 @@
   z-index: 9999;  /* Đảm bảo modal luôn hiển thị trên các phần tử khác */
   width: 100%;  /* Đảm bảo modal sẽ chiếm toàn bộ chiều rộng nếu màn hình nhỏ */
   box-sizing: border-box;
+  margin-bottom: 10px;
+  position: relative;
 }
 
 /* Nút đóng modal */
 .close {
   position: absolute;
-  top: 70px;
-  right: 29%;
-  font-size: 32px;
+  top: 1px;
+  right: 5px;
+  font-size: 35px;
   color: #333;
   background: none;
   border: none;
