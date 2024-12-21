@@ -34,29 +34,36 @@ function HomePage() {
 function MainBanner() {
   return (
     <section className="banner-home">
-      <Swiper
-        spaceBetween={0} // Khoảng cách giữa các slide
-        slidesPerView={1} // Chỉ hiển thị một slide một lúc
-        loop={true} // Lặp lại vòng quay các slide
-        autoplay={{
-          delay: 5000, // Thời gian delay giữa các slide (3 giây)
-          disableOnInteraction: false, // Không dừng autoplay khi người dùng tương tác
-          waitForTransition: true,
-        }}
-        effect="fade" // Hiệu ứng chuyển đổi giữa các slide
-        modules={[Autoplay, EffectFade]} // Thêm các module Autoplay và EffectFade
-      >
-        <SwiperSlide>
-          <div className="banner-slide" style={{ backgroundImage: "url('/banner.jpg')" }}></div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="banner-slide" style={{ backgroundImage: "url('/banner2.jpg')" }}></div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="banner-slide" style={{ backgroundImage: "url('/banner3.jpg')" }}></div>
-        </SwiperSlide>
-      </Swiper>
-    </section>
+  <Swiper
+    spaceBetween={0}
+    slidesPerView={1}
+    loop={true}
+    autoplay={{
+      delay: 5000,
+      disableOnInteraction: false,
+      waitForTransition: true,
+    }}
+    effect="fade"
+    modules={[Autoplay, EffectFade]}
+  >
+    <SwiperSlide>
+      <div className="banner-slide">
+        <img src="/banner.jpg" alt="Banner 1" />
+      </div>
+    </SwiperSlide>
+    <SwiperSlide>
+      <div className="banner-slide">
+        <img src="/banner2.jpg" alt="Banner 2" />
+      </div>
+    </SwiperSlide>
+    <SwiperSlide>
+      <div className="banner-slide">
+        <img src="/banner3.jpg" alt="Banner 3" />
+      </div>
+    </SwiperSlide>
+  </Swiper>
+</section>
+
   );
 }
 
