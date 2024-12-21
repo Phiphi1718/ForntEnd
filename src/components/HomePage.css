@@ -13,7 +13,7 @@ body {
 /* Banner container */
 .banner-home {
   width: 100%;
-  height: 530px; /* Chiều cao cố định */
+  height: 550px; /* Chiều cao cố định */
   position: relative;
   overflow: hidden;
   background-color: #f8f8f8; /* Màu nền */
