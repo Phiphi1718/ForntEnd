@@ -30,9 +30,7 @@ body {
   height: 530px;
   display: flex;
   align-items: flex-end;
-  /* Align content at the bottom */
   transition: all 0.5s ease;
-  /* Thêm hiệu ứng chuyển đổi */
 }
 
 /* Floating Button Styles */
